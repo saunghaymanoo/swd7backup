@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0aae72fb-1881-4e5f-aacd-3a3d711557bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../14_js_advance/2_oop/js/animal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../14_js_advance/3_js_nodejs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../14_js_advance/3_js_nodejs/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../14_js_advance/4_modern_javascript_project/4.1-npm-project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-cli-todo-app/src/components/BaseText.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-cli-todo-app/src/components/ListComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-cli-todo-app/src/components/ListCreate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-cli-todo-app/src/components/TitleComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_component/first-app/src/components/ListItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue_component/first-app/src/components/ListTitle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../js_mini_project/js_gallery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../js_mini_project/js_gallery/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="28VrWPz5BatRpd8MNfrzr5M3I4x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aae72fb-1881-4e5f-aacd-3a3d711557bb" name="Default Changelist" comment="" />
+      <created>1651312624616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651312624616</updated>
+      <workItem from="1651312625833" duration="1492000" />
+      <workItem from="1651462299135" duration="1665000" />
+      <workItem from="1651465024876" duration="441000" />
+      <workItem from="1651480796333" duration="942000" />
+      <workItem from="1651485524527" duration="1782000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="551" y="255" key="#ESLint" timestamp="1651312789140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="551" y="255" key="#ESLint/0.0.1366.728@0.0.1366.728" timestamp="1651312789140" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/vue-cli-todo-app/src/App.vue</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

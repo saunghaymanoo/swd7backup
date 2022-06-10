@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4Dom</title>
+</head>
+<body>
+    <p id="p">this is p tag</p>
+    <input type="text" id="input">
+    <select name="" id="select">
+        <option value="mm">mm</option>
+        <option value="cn">cn</option>
+        <option value="kr">kr</option>
+    </select>
+    <button class="btn">Click</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".btn").click(function(){
+            let d= $("#p").html("I wanna change");
+            let e= $("#select").val();
+
+            console.log(d,e);
+        });
+    </script>
+</body>
+</html>

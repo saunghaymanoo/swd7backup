@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wow Js</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+</head>
+<body>
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 1</h1>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 2</h1>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 3</h1>
+            </div>
+        </div>
+    </section>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script>
+        wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animate__animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+    </script>
+</body>
+</html>

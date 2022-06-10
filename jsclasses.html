@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myObj={
+            name:"su pon",
+            age:21,
+            introduction:function(){
+                return `My name is ${this.name} and ${this.age} years old`;
+            }
+        };
+        //class expression
+        class Me{
+            name="su pon";
+            age=21;
+            #gf="Eaindra Kyaw Zin";
+            showGf(){
+            return `${this.#gf} is my GirlFriend.`;
+        }
+
+            introduction(){
+                return `My name is ${this.name} and ${this.age} years old`;
+            }
+        }
+
+        class Reg{
+            constructor(name,age){
+                console.log("this is constructor");
+                this.name=name;
+                this.age=age;
+            }
+            //prototype method
+            get showBdy(){
+                let currentYear=new Date().getFullYear();
+                return currentYear-this.age;
+            }
+            //static method
+            static test(){
+                return 'THIS IS STATIC METHOD';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box Testing</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box
+        }
+        .bg-gray{
+            background-color: gray;
+        }
+        .bg-skyblue{
+            background-color: skyblue;
+        }
+        .bg-orange{
+            background-color: orangered;
+        }
+        .one{
+            height:50vh;
+            background-color: #a19090;
+            display:flex;
+        }
+        .part{
+            flex-grow:1;
+        }
+        .part.right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .two{
+            width:990px;
+            display:flex;
+            margin:auto;
+            justify-content: space-between;
+            margin-top: -100px;
+        }
+        .two-part{
+            text-align:center;
+            padding:30px 15px;
+            background-color: pink;
+            width:300px;
+            box-shadow: 0 0 25px #00000020;
+        }
+        .third{
+            width:990px;
+            margin:100px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .third-part{
+            width:500px;
+            text-align:center;
+        }
+        .four{
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+        .four-img{
+            width:450px;
+        }
+        .four-part{
+            width:450px;
+            padding:0 50px;
+        }
+        .five{
+            background-color: skyblue;
+            flex-direction: row-reverse;
+        }
+        .five-part{
+            text-align: right;
+        }
+        @media screen and (max-width:480px){
+            .one,.two,.third,.five{
+                flex-direction: column;
+            }
+            div,section{
+               max-width:100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="one">
+        <div class="part left bg-gray"></div>
+        <div class="part right bg-orange">
+            <div style="width: 300px;">
+                <h1>This is Title</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate facilis, neque delectus laudantium, eveniet accusamus harum voluptatem ratione natus, rem voluptatibus! Officia amet vitae laudantium, iste possimus soluta nulla eius.</p>
+            </div>
+        </div>
+
+    </section>
+    <section class="two">
+        <div class="two-part">
+            <h1>This is One</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore architecto ad tempore maxime, corrupti odio commodi officia voluptatum quidem minus laborum consectetur ipsam, dolores laboriosam, ex adipisci voluptate dolorum!</p>
+        </div>
+        <div class="two-part">
+            <h1>This is two</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore architecto ad tempore maxime, corrupti odio commodi officia voluptatum quidem minus laborum consectetur ipsam, dolores laboriosam, ex adipisci voluptate dolorum!</p>
+        </div>
+        <div class="two-part">
+            <h1>This is Three</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore architecto ad tempore maxime, corrupti odio commodi officia voluptatum quidem minus laborum consectetur ipsam, dolores laboriosam, ex adipisci voluptate dolorum!</p>
+        </div>
+    </section>
+    <section class="third">
+        <div class="third-part">
+            <h1>This is Third Part</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex pariatur, porro laborum rem modi obcaecati. Dolor, sequi repellendus reprehenderit, rem quas, eum delectus quae aperiam iusto eos soluta incidunt explicabo.</p>
+        </div>
+    </section>
+    <section class="four">
+        <img src="poe.jpg" alt="pow mami thar" class="four-img">
+        <div class="four-part">
+            <h1>This is photo</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vitae laudantium earum, distinctio et dicta odit quos molestias est rerum animi veniam accusantium impedit tempora, quis inventore exercitationem debitis. Nobis?</p>
+    
+        </div>    
+    </section>
+    <section class="four five bg-skyblue">
+        <img src="poe.jpg" alt="pow mami thar" class="four-img">
+        <div class="four-part five-part">
+            <h1>This is photo</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti vitae laudantium earum, distinctio et dicta odit quos molestias est rerum animi veniam accusantium impedit tempora, quis inventore exercitationem debitis. Nobis?</p>
+    
+        </div>    
+    </section>
+</body>
+</html>

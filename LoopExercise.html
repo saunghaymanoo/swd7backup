@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    tr,td{
+       padding:10px 15px;
+        border:1px solid black;
+    }
+    .dark{
+        background-color: black;
+    }
+</style>
+<body>
+    <table>
+        <tbody id="tbody">
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>country table</h4>
+    <table id="ctb">
+        <thead>
+            <tr id="Theadtr">
+                <td>No</td>
+                <td>Author</td>
+                <td>PublishedAt</td>
+            </tr>
+        </thead>
+        <tbody id="countryBody"></tbody>
+    </table>
+    <script src="js/newsapi.js"></script>
+    <script>
+        console.log(data.articles);
+        // let tbody=document.getElementById("tbody");
+        // let articles=data.articles[1];
+        // let status=data.status;
+        // console.log(articles);
+        for(x of data.articles){
+            console.log(x);
+            console.log(x.author);
+            tbody.innerHTML+=`<tr><td>${x.url}</td>
+                                    <td>${x.author}</td>
+                            </tr>`;
+                    break;        
+        }
+        let thead=document.getElementsByTagName("thead")[0];
+        let table=document.getElementsByTagName("table")[1];
+        let tr=document.getElementById("Theadtr");
+        
+        let tablebody=document.getElementById("countryBody");
+        for(x in data.articles){
+                console.log("x="+x);
+                console.log("data.articles[x]="+data.articles[x].author);
+                tr.innerHTML+=`<td>${x}</td>`;
+                let tbodytr=document.createElement("tr");
+                for(x in data.articles){
+                    let tbodytd=document.createElement("td");
+                    let txtNode=document.createTextNode(`${data.articles[x].author}`);
+                    tbodytd.appendChild(txtNode);
+                    tbodytr.appendChild(tbodytd);
+                    
+                }
+                tablebody.appendChild(tbodytr);
+                
+            
+        }
+        let article=data.articles;
+        // console.log(article);
+        // let ctb=document.getElementById("ctb");
+        // let countryBody=document.getElementById("countryBody");
+        // article.map(function(el,index){
+        //     countryBody.innerHTML+=`<tr>
+        //         <td>${index+1}</td>
+        //         <td>${el.author}</td>
+        //         <td>${el.publishedAt}</td></tr>`;
+        // });
+       
+    //     for(i=1;i<=8;i++){
+    //         let tr=document.createElement("tr");
+    //         if(i%2!=0){
+    //             for(x=1;x<=8;x++){
+    //             let td=document.createElement("td");
+    //             if(x%2!=0){
+    //                 tr.appendChild(td);
+    //                 td.classList="dark";
+    //             }else{
+    //                 tr.appendChild(td);
+    //             }
+    //             }
+    //         }else{
+    //             for(x=1;x<=8;x++){
+    //             let td=document.createElement("td");
+    //             if(x%2!=0){
+    //                 tr.appendChild(td);
+                   
+    //             }else{
+    //                 tr.appendChild(td);
+    //                 td.classList="dark";
+    //             }
+    //         }
+    //         }
+    //         tbody.appendChild(tr);
+    //     }
+    // </script>
+</body>
+</html>

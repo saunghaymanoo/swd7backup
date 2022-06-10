@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <audio src="phpstorm/audio/mmidol_4_song.mp3" controls></audio> -->
+   
+    <!-- <input type="file" id="upload" multiple>
+    <ul id="list"></ul> -->
+
+    <form action="" id="test">
+        <input type="text" name="uname" required>
+        <br>
+        <input type="text" name="password" required>
+        <br>
+        <button>register</button>
+    </form>
+    <script>
+        // let a=new Audio('phpstorm/audio/mmidol_4_song.mp3');
+
+        // document.getElementById("upload").addEventListener("change",function(){
+        //     let upload=this.files;
+        //     console.log(upload);
+        //     for(x of upload){
+        //         console.log(upload[x]);
+        //         document.getElementById("list").innerHTML+= `<li>${x.name}</li>`;
+        //     }
+        // })
+
+            document.getElementById("test").addEventListener("submit",function(e){
+                e.preventDefault();
+                let f=new FormData(this);
+                console.log(f.get("uname"));
+                
+                for(pair of f.entries()){
+                    console.log(pair[1]);
+                }
+            })
+    </script>
+</body>
+</html>

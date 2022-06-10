@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .news{
+            width:80%;
+            margin:100px auto;
+            columns:3 250px;
+        }
+        .card{
+            width:100%;
+        }
+        .card-img{
+            width:100%;
+        }
+        p{
+            display:flex;
+            justify-content: center;
+            align-items:stretch;
+        }
+        #loadgit{
+           position:absolute;
+           top:200px;
+           left:500px;
+        }
+    </style>
+</head>
+<body>
+    <p id="com">
+        <img src="js/Spinner-1s-200px.gif" id="loadgit" alt="">
+    </p>
+    <div class="news"></div>
+    <script>
+        let com=document.getElementById("com");
+        let img=document.getElementById("loadgit");
+        
+
+        fetch('https://newsapi.org/v2/everything?q=tesla&from=2021-12-05&sortBy=publishedAt&apiKey=595446d4001544458c3f10c99d65f7e7')
+        .then(response => response.json())
+        .then(data =>{
+              console.log(data)
+             com.innerHTML="success";
+            let news=document.getElementsByClassName("news")[0];
+            data.articles.map(function(el,index){
+            console.log(el);
+            news.innerHTML+=`
+            <div class="news">
+                <div class="card">
+                    <img class="card-img" src="${el.urlToImage}" alt="">
+                    <h4 class="title">${el.title}</h4>
+                    <small class="author">${el.author}</small>
+                    <p class="description">${el.description}</p>
+                    <a href="${el.url}" class="read-more"></a>
+                </div>
+            </div>
+            `;
+        });
+            })
+        .catch(function(){
+            console.log("you are in err");
+        })
+    </script>
+</body>
+</html>

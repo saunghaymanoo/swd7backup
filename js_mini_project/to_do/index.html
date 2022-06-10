@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <br>
+    <ul id="list"></ul>
+    <script>
+        let input=document.getElementById("input");
+        let list=document.getElementById("list");
+        let k=Object.keys(localStorage);
+        k.sort();
+
+        let id=1;
+        if(localStorage.length>1){
+            id=Number(k[k.length-1])+1;
+        }
+
+        function save(x){
+            localStorage.setItem(id,x);
+            id++;
+        }
+
+        function addToList(x,y){
+            let li=document.createElement("li");
+            let text=document.createTextNode(" "+x);
+
+            let btn=document.createElement("button");
+            let btnText=document.createTextNode("Delete");
+            btn.appendChild(btnText);
+            btn.setAttribute("onclick","del("+y+")");
+
+            let btn1=document.createElement("button");
+            let btn1Text=document.createTextNode("Edit");
+            btn1.appendChild(btn1Text);
+            btn1.setAttribute("onclick","edit("+y+")");
+            //button
+            li.appendChild(btn1);
+            
+            li.appendChild(btn);
+
+            li.appendChild(text);
+            li.setAttribute("id","List"+y);
+            
+            list.appendChild(li);
+
+            input.value="";
+        }
+        function replaceToList(c,x,y){
+            let text=document.createTextNode(" "+x);
+
+        }
+        function edit(x){
+            //window.alert("Are you sure to edit");
+            let editText=window.prompt(localStorage[x]);
+            let editTextNode=document.createTextNode(" "+editText);
+            console.log(editText);
+            let current=document.getElementById("List"+x);
+            //  let t=current.childNodes[2].nodeValue;
+             let t=current.childNodes[2];
+
+            
+             current.replaceChild(editTextNode,t);
+            //current.childNodes[2].nodeValue=" "+editText;
+            localStorage.setItem(x,editText);
+            // current.appendChild(editTextNode);
+            
+        }
+        function del(x){
+            localStorage.removeItem(x);
+            let current=document.getElementById("List"+x);
+            current.remove();
+        }
+        function showList(){
+           
+           k.map(function(el){
+            addToList(localStorage.getItem(el),el);
+           });
+        }
+        document.addEventListener("keyup",function(e){
+            if(e.keyCode==13){
+            let note=input.value;
+            console.log(note);
+            addToList(note,id);
+            save(note);
+            
+            
+            }
+        });
+        showList();
+
+        let me={
+            name:"Su Pon",
+            age:21,
+            status:false,
+            job:"Developer"
+        }
+    </script>
+</body>
+</html>

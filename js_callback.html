@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one">Click</button>
+    <script>
+        function ee(x){
+           console.log("final result is "+x);
+       }
+       function dd(x,y,callback){
+           let z=x+y;
+           callback(z);
+       }
+    //    dd(1,2,function(){
+    //        console.log("this is callback");
+    //        alert("this is callback");
+    //    });
+    dd(3,4,ee);
+       
+        function aa(){
+            console.log("this is aa");
+            function aaa(){
+                console.log("this is aaa");
+            }
+
+            aaa();
+        }
+        function bb(x,z){
+            let resoult=x*z;
+            function bbb(z){
+                console.log("this is final resoult ="+z); 
+            }
+            bbb(resoult);
+        }
+        function cc(x){
+            let input="this is input ="+x;
+            return function(){
+                console.log(input);
+            }
+        }
+    </script>
+</body>
+</html>

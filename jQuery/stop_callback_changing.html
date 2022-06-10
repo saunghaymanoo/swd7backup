@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Callback Changing</title>
+    <style>
+        .obj{
+            width: 300px;
+            height: 100px;
+            background:gray;
+            margin-top: 10px;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <button class="animate">Animate</button>
+    <button class="stop">Stop</button>
+
+    <div class="obj"></div>
+
+    <button class="chain">Chainging</button>
+    <p class="obj2">I'm Su Pon</p>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".animate").click(function(){
+            $(".obj").animate({
+                left:"+=100px",
+                top:"+=100px",
+               
+            },3000,function(){
+                console.log("animation is finished");
+            });
+        });
+        $(".stop").click(function(){
+            $(".obj").stop();
+        });
+        
+    $(".chain").click(function(){
+        $(".obj2").hide(2000).show(1000).css("color","blue");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venobox</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+    <link rel="stylesheet" href="vendor/venobox/venobox.css">
+</head>
+<body>
+  <div class="container">
+
+      <div class="row">
+          <div class="card-columns col-12">
+            <div class="my-3">
+                <a class="venobox" data-gall="myGallery" href="../images/poe-portrait-4.jpg">
+                    <img src="../images/poe-square-1.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+            <div class="my-3">
+                <a class="venobox" href="../images/poe-portrait-5.jpg">
+                    <img src="../images/poe-square-4.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+
+            <div class="my-3">
+                <a class="venobox" href="../images/poe-portrait-1.jpg">
+                    <img src="../images/poe-square-2.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+
+            <div class="my-3">
+                <a class="venobox" data-gall="myGallery" href="../images/poe-landscape-2.jpg">
+                    <img src="../images/poe-landscape-3.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+
+            <div class="my-3">
+                <a class="venobox" data-gall="myGallery" href="../images/poe-portrait-2.jpg">
+                    <img src="../images/poe-square-3.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+
+            <div class="my-3">
+                <a class="venobox" data-gall="myGallery" href="../images/poe-portrait-6.jpg">
+                    <img src="../images/poe-square-6.jpg" class="img-fluid" alt="image alt"/>
+                </a>
+            </div>
+          </div><!--column end-->
+      </div>
+
+  </div>
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/venobox/venobox.min.js"></script>
+    <script>
+        // var venobox = new VenoBox({
+        //     selector: ".my-link"
+        // });
+        $(document).ready(function(){
+            $('.venobox').venobox({
+                framewidth : '400px',                            // default: ''
+                frameheight: 'auto',                            // default: ''
+                border     : '2',                             // default: '0'
+                bgcolor    : '#f60',                          // default: '#fff'
+                titleattr  : 'data-title',                       // default: 'title'
+                numeratio  : true,                               // default: false
+                infinigall : true,                               // default: false
+                share      : ['facebook', 'twitter', 'download'] // default: []
+            });
+        })
+      
+    </script>
+</body>
+</html>

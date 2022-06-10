@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Points</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/animate_it/animate.css">
+</head>
+<body>
+
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+                        <a class="navbar-brand" href="#">MMS</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                          <ul class="navbar-nav">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                          </ul>
+                          
+                        </div>
+                      </nav>
+               
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 1</h1>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid vh-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 2</h1>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container-fluid vh-100 bg-primary" id="three">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 3</h1>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid vh-100 bg-danger" id="four">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <h1 class="text-center wow animate__zoomIn">Sectioon 4</h1>
+            </div>
+        </div>
+    </section>
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/way_point/jquery.waypoints.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script>
+        wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animate__animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
+
+                    let aa = $('#three').waypoint(function(direction){
+                        console.log("I am here");
+                        // $(".navbar").toggleClass("bg-primary").toggleClass("bg-danger")
+                        if(direction=="down"){
+                          $(".navbar").removeClass("bg-primary");
+                          $(".navbar").addClass("bg-danger");
+                        }else{
+                          $(".navbar").removeClass("bg-danger");
+                          $(".navbar").addClass("bg-primary");
+                        }
+                    },{
+                        offset:"20%"
+                    });
+
+                    let bb = $('#four').waypoint(function(){
+                        console.log("I am here");
+                        $(".navbar").toggleClass("bg-danger").toggleClass("bg-primary")
+                    },{
+                        offset:"20%"
+                    });
+    </script>
+</body>
+</html>

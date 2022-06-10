@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="clock"></p>
+    <button id="stop">Stop</button>
+    <script>
+        // let test=function(){
+        //     console.log("this is test function!");
+        // };
+        let clock=document.getElementById("clock");
+        let btn=document.getElementById("stop");
+        
+        function showTime(){
+            let d=new Date();
+            clock.innerHTML=`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+        }
+        let run=setInterval(showTime,1000);
+        btn.addEventListener("click",function(){
+            clearInterval(run);
+        });
+        btn.onclick=function(){
+        
+        };
+    </script>
+</body>
+</html>

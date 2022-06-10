@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Js</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/slick/slick.css">
+    <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="slide my-5">
+                    <img src="../images/poe-landscape-1.jpg" class="img-fluid mx-3" alt="">
+                    <img src="../images/poe-landscape-2.jpg" class="img-fluid mx-3" alt="">
+                    <img src="../images/poe-landscape-3.jpg" class="img-fluid mx-3" alt="">
+                    <img src="../images/poe-landscape-4.jpg" class="img-fluid mx-3" alt="">
+                    <img src="../images/poe-landscape-5.jpg" class="img-fluid mx-3" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script>
+        $('.slide').slick({
+          dots:true,
+            centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+        });
+    </script>
+</body>
+</html>
